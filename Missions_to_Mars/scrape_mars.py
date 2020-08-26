@@ -23,13 +23,13 @@ def scrape_info():
     soup = bs(html, "html.parser")
 
     # Get the News Info Section
-    news_info = soup.find('div?????', id='title????')
+    news_info = soup.find('div', "list_text")
 
     # collect the latest News Title
-    news_title = news_info.find_all('strong?????')[0].text
+    news_title = news_info.find_all("content_title")[0].text
 
     # news article Paragraph Text
-    news_p = news_info.find_all('p?????')[1].text
+    news_p = news_info.find_all("article_teaser_body")[1].text
 
     
     # Visit the url for JPL Featured Space Image here
