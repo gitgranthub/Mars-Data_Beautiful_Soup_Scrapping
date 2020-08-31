@@ -20,6 +20,29 @@
     <h3>Latest Mars News:</h2>
     <h2>{{ mars_data.news_title }}</h3>
     <p>{{ mars_data.news_p }}</p>
+    <div>
+
+
+      {% for dict in dict.img_dict %}
+
+      <div class="col-lg-4">
+        <h3>Mars Hemispheres</h3>
+        <div class="card-columns">
+          <div class="card" style="width: 100%">
+            <img class="card-img border border-warning" src="{{ dict.img_url }}">
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">{{ dict.title }}</h4>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+
+
+
+
+</div>
   </div>
   </div>
 </body>
