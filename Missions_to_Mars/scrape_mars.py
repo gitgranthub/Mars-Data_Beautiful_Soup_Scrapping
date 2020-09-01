@@ -153,6 +153,8 @@ def scrape_info():
         # go to full image url
         browser.visit(main_url + just_img_url)
 
+        time.sleep(1)
+
         # store html 
         img_html = browser.html
 
@@ -164,12 +166,14 @@ def scrape_info():
         # Append the retreived information into a list of dictionaries 
         hemi_urls.append({"title" : title, "img_url" : img_url})
 
-     browser.quit()
+        time.sleep(1)
+
+    browser.quit()
     # see list
 
-    
-    
-    
+        
+        
+        
     ## This section is connected in the app.py
     
     # Store data in a dictionary
