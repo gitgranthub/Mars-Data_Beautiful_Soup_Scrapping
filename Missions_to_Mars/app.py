@@ -17,11 +17,9 @@ def home():
     
     # Find one record of data from the mongo database
     mars_data = mongo.db.collection.find_one()
-    # Find one record of data from the mongo database
-    image_dict = mongo.db.collection.find_one()
 
     # Return template and data
-    return render_template("index.html", mars_data=mars_data, dict=image_dict)
+    return render_template("index.html", mars_data=mars_data)
 
 
 

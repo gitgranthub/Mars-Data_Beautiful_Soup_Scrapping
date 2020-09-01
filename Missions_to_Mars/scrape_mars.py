@@ -164,9 +164,8 @@ def scrape_info():
         # Append the retreived information into a list of dictionaries 
         hemi_urls.append({"title" : title, "img_url" : img_url})
 
-    browser.quit()
+     browser.quit()
     # see list
-    hemi_urls
 
     
     
@@ -174,14 +173,15 @@ def scrape_info():
     ## This section is connected in the app.py
     
     # Store data in a dictionary
-    image_dict = hemi_urls
     
     mars_data = {
         "news_title": news_title,
         "news_p": news_p,
         "featured_image_url": featured_image_url,
         "mars_facts": mars_facts,
+        "hemi_urls": hemi_urls
     }
+
 
 
     return mars_data
