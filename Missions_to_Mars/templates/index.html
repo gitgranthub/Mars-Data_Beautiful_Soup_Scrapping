@@ -8,7 +8,7 @@
     <title>Mission to Mars</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
 
   </head>
   <body>
@@ -49,26 +49,29 @@
 				<h3>
 					Mars Facts
 				</h3>
-				<table class="table">
-					{{ mars_data.mars_facts }}
-				</table>
+				<div style="max-width: 450px; max-height: 150px; font-size: 15px; margin-bottom: 20px;">
+					{{mars_data.mars_facts|safe}}
+				</div>
 			</div>
 		</div>
 	</div>
+	<hr>
 	<div class="row">
-		<div class="col-md-12">
-			<h3>Mars Hemispheres</h3>
-			<div class="card-columns">
+		<div class="card-deck">
+			<div class="col-md-12">
+				<h3>Mars Hemispheres</h3>
 
 				{% for dict in mars_data.hemi_urls %}
 
-				<div class="card" style="width: 50%">
-					<img class="card-img" src="{{ dict.img_url }}" style="width: 100%">
-				</div>
-				<div class="card-body">
-					<h4 class="card-title">
-						{{ dict.title }}
-					</h4>
+				<div class="card-columns">
+					<div class="card" style="width: 50%">
+						<img class="card-img" src="{{ dict.img_url }}" style="width: 100%">
+					</div>
+					<div class="card-body">
+						<h4 class="card-title">
+							{{ dict.title }}
+						</h4>
+					</div>
 				</div>
 
 				{% endfor %}

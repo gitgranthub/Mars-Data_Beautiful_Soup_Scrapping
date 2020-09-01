@@ -105,15 +105,15 @@ def scrape_info():
     # make the pandas table object a dataframe and make sure it's the 1st table
     df = tables[0]
     ## remove index
-    df.set_index([0], inplace=True)
-    df
+    #df.set_index([0], inplace=True)
+    #df
 
     # Just making sure there are non column labels
-    df.columns.name = None
+    df.columns = ['Facts', 'Data']
     df
 
     ## HTML tables from DataFrames
-    mars_facts = df.to_html()
+    mars_facts = df.to_html(justify='left',index=False)
     mars_facts
 
 
