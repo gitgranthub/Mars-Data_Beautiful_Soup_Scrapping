@@ -2,6 +2,7 @@ from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
 import scrape_mars
 
+
 # Create an instance of Flask
 app = Flask(__name__)
 
@@ -20,8 +21,8 @@ def home():
     image_dict = mongo.db.collection.find_one()
 
     # Return template and data
-    return render_template("index.html", mars_data=mars_data)
-    return render_template("index.html", dict=image_dict)
+    return render_template("index.html", mars_data=mars_data, dict=image_dict)
+
 
 
 
