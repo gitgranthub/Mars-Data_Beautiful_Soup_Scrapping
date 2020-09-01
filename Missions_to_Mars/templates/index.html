@@ -40,17 +40,19 @@
 			</p>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-8">
-			<img alt="JPL_image" src="{{ mars_data.featured_image_url }}" class="rounded">
-		</div>
-		<div class="col-md-4">
-			<h3>
-				Mars Facts
-			</h3>
-			<table class="table">
-				{{ mars_data.mars_facts }}
-			</table>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-8">
+				<img alt="JPL_image" src="{{ mars_data.featured_image_url }}" class="rounded" style="width: 75%">
+			</div>
+			<div class="col-sm-4">
+				<h3>
+					Mars Facts
+				</h3>
+				<table class="table">
+					{{ mars_data.mars_facts }}
+				</table>
+			</div>
 		</div>
 	</div>
 	<div class="row">
@@ -61,7 +63,7 @@
 				{% for dict in mars_data.hemi_urls %}
 
 				<div class="card" style="width: 50%">
-					<img class="card-img" src="{{ dict.img_url }}">
+					<img class="card-img" src="{{ dict.img_url }}" style="width: 100%">
 				</div>
 				<div class="card-body">
 					<h4 class="card-title">
